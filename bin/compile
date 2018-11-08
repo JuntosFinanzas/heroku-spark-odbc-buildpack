@@ -16,9 +16,9 @@ echo `ls $BUILD_DIR/.apt/usr/lib` # > libdrvproxy.so.2 libdrvproxy.so.2.1.19 lib
 echo `ls $BUILD_DIR/.apt/usr/share`
 
 # Tell Bundler how to get to the odbc directory
-export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=/usr/local/Cellar/libiodbc/3.52.12/"
+export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=$BUILD_DIR/.apt/usr/"
 
 # Make sure we export the relevant environment variables for later buildpacks
 export | grep -E -e '(BUNDLE_BUILD__RUBY_ODBC)='  > "$LP_DIR/export"
 
-exit 1
+exit 0
