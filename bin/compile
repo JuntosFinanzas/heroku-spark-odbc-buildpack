@@ -1,9 +1,8 @@
 #!/bin/bash
 
 echo "** Install locations"
-echo `ls /usr/local/bin`
-echo `ls /usr/bin`
-echo `/bin`
+echo `which odbcinst`
+echo `which isql`
 
 # Tell Bundler how to get to the odbc directory
 export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=/usr/local/Cellar/libiodbc/3.52.12/"
