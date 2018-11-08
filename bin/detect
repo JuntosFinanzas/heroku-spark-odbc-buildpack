@@ -1,0 +1,3 @@
+#!/bin/bash
+
+echo "heroku-spark-odbc-buildpack" && exit 0
