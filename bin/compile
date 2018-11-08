@@ -5,11 +5,13 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 echo "** Install locations"
-echo `ls $BUILD_DIR/.apt/opt/simba/sparkodbc`
+echo `ls -l $BUILD_DIR/.apt/opt/simba/sparkodbc`
+echo `ls -l $BUILD_DIR/.apt/opt/simba/sparkodbc/lib`
 echo '--'
 echo `ls $BUILD_DIR/.apt/usr/`
 echo '--'
 echo `ls $BUILD_DIR/.apt/usr/bin` # > iodbcadm-gtk iodbctest
+echo `ls $BUILD_DIR/.apt/usr/include`
 echo `ls $BUILD_DIR/.apt/usr/lib` # > libdrvproxy.so.2 libdrvproxy.so.2.1.19 libiodbcadm.so.2 libiodbcadm.so.2.1.19 libiodbcinst.so.2 libiodbcinst.so.2.1.19 libiodbc.so.2 libiodbc.so.2.1.19
 echo `ls $BUILD_DIR/.apt/usr/share`
 
