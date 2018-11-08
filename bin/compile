@@ -5,9 +5,11 @@ CACHE_DIR=$2
 LP_DIR=`cd $(dirname $0); cd ..; pwd`
 
 echo "** Install locations"
-echo `ls $BUILD_DIR/.apt/opt`
+echo `ls $BUILD_DIR/.apt/opt/simba`
 echo '--'
-echo `ls $BUILD_DIR/.apt/usr`
+echo `ls $BUILD_DIR/.apt/usr/bin`
+echo `ls $BUILD_DIR/.apt/usr/lib`
+echo `ls $BUILD_DIR/.apt/usr/share`
 
 # Tell Bundler how to get to the odbc directory
 export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=/usr/local/Cellar/libiodbc/3.52.12/"
