@@ -1,8 +1,7 @@
 #!/bin/bash
 
 echo "** Install locations"
-echo `dpkg -L libiodbc2`
-echo `dpkg -L iodbc`
+echo `apt list --installed`
 
 # Tell Bundler how to get to the odbc directory
 export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=/usr/local/Cellar/libiodbc/3.52.12/"
