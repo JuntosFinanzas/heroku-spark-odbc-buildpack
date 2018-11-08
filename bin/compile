@@ -1,11 +1,16 @@
 #!/bin/bash
 
+BUILD_DIR=$1
+CACHE_DIR=$2
+LP_DIR=`cd $(dirname $0); cd ..; pwd`
+
 echo "** Install locations"
-echo `which odbcinst`
-echo `which isql`
+echo `ls $BUILD_DIR/.apt/`
 
 # Tell Bundler how to get to the odbc directory
 export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=/usr/local/Cellar/libiodbc/3.52.12/"
 
 # Make sure we export the relevant environment variables for later buildpacks
-export | grep -E -e '(BUNDLE_BUILD__RUBY_ODBC)='  > "$buildpack/export"
+export | grep -E -e '(BUNDLE_BUILD__RUBY_ODBC)='  > "$LP_DIR/export"
+
+exit 1
