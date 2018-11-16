@@ -15,7 +15,7 @@ echo `ls $BUILD_DIR/.apt/usr/include/iodbc/`
 # Working for Pensieve
 # export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=$BUILD_DIR/.apt/usr/"
 
-# output for Galapagos
+# Working for Galapagos
 export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-include=$BUILD_DIR/.apt/usr/include/iodbc/ --with-opt-include=$BUILD_DIR/.apt/usr/include/iodbc/ --with-odbc-dir=$BUILD_DIR/.apt/usr/"
 export LD_LIBRARY_PATH="$BUILD_DIR/.apt/usr/include/iodbc/:$LD_LIBRARY_PATH"
 
