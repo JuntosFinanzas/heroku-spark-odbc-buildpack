@@ -16,8 +16,7 @@ echo `ls $BUILD_DIR/.apt/usr/include/iodbc/`
 # export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-dir=$BUILD_DIR/.apt/usr/"
 
 # output for Galapagos
-# export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-include=$BUILD_DIR/.apt/usr/include/iodbc/"
-export BUNDLE_BUILD__RUBY_ODBC="$BUILD_DIR/.apt/usr/include/iodbc/"
+export BUNDLE_BUILD__RUBY_ODBC="--with-odbc-include=$BUILD_DIR/.apt/usr/include/iodbc/"
 
 # Make sure we export the relevant environment variables for later buildpacks
 export | grep -E -e '(BUNDLE_BUILD__RUBY_ODBC)='  > "$LP_DIR/export"
